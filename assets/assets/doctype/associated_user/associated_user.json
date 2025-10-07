@@ -1,0 +1,56 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-08-14 16:58:33.223489",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "selfdoc",
+  "column_break_tqlb",
+  "associated_asset"
+ ],
+ "fields": [
+  {
+   "default": "Contact",
+   "fieldname": "selfdoc",
+   "fieldtype": "Link",
+   "label": "Associated User",
+   "link_filters": "[[\"DocType\",\"module\",\"=\",\"Contacts\"],[\"DocType\",\"name\",\"=\",\"Contact\"]]",
+   "options": "DocType",
+   "read_only": 1,
+   "remember_last_selected_value": 1,
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "column_break_tqlb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "associated_asset",
+   "fieldtype": "Dynamic Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Associated Account",
+   "options": "selfdoc",
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-08-28 15:55:05.696402",
+ "modified_by": "Administrator",
+ "module": "Assets",
+ "name": "Associated User",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

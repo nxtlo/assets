@@ -1,0 +1,50 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-08-14 11:55:24.527351",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "selfdoc",
+  "column_break_tqlb",
+  "associated_asset"
+ ],
+ "fields": [
+  {
+   "fieldname": "selfdoc",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Associated Type",
+   "link_filters": "[[\"DocType\",\"module\",\"=\",\"Assets\"]]",
+   "options": "DocType",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_tqlb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "associated_asset",
+   "fieldtype": "Dynamic Link",
+   "in_list_view": 1,
+   "label": "Associated Asset",
+   "options": "selfdoc",
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-08-28 15:55:00.507767",
+ "modified_by": "Administrator",
+ "module": "Assets",
+ "name": "Associated Asset",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

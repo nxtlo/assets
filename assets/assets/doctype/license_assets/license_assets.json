@@ -1,0 +1,201 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-08-19 11:56:58.088990",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "basic_details_section",
+  "general_information_column",
+  "license_model",
+  "column_break_lvqk",
+  "user",
+  "license_section",
+  "basic_info_column",
+  "auth",
+  "state",
+  "authentication_column",
+  "login_username",
+  "login_password",
+  "license_key",
+  "subscription_details_section",
+  "subscription_expires",
+  "renew_cycle",
+  "sharing_section",
+  "table_gqjh",
+  "resources_section",
+  "invoices",
+  "column_break_bhiz",
+  "images"
+ ],
+ "fields": [
+  {
+   "fieldname": "basic_details_section",
+   "fieldtype": "Section Break",
+   "label": "Software Information"
+  },
+  {
+   "fieldname": "general_information_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "license_model",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Name",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_lvqk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "User",
+   "options": "Contact"
+  },
+  {
+   "fieldname": "license_section",
+   "fieldtype": "Section Break",
+   "label": "License"
+  },
+  {
+   "fieldname": "basic_info_column",
+   "fieldtype": "Column Break",
+   "label": "Basic Info"
+  },
+  {
+   "fieldname": "auth",
+   "fieldtype": "Select",
+   "label": "Auth",
+   "options": "Login\nLicense Key",
+   "reqd": 1
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "State",
+   "options": "Active\nInactive\nUnused\nExpired",
+   "reqd": 1
+  },
+  {
+   "fieldname": "authentication_column",
+   "fieldtype": "Column Break",
+   "label": "Authentication"
+  },
+  {
+   "depends_on": "eval: doc.auth == \"Login\"",
+   "fieldname": "login_username",
+   "fieldtype": "Data",
+   "label": "Login Username"
+  },
+  {
+   "depends_on": "eval: doc.auth == \"Login\"",
+   "fieldname": "login_password",
+   "fieldtype": "Password",
+   "label": "Login Password"
+  },
+  {
+   "depends_on": "eval: doc.auth == \"License Key\"",
+   "fieldname": "license_key",
+   "fieldtype": "Data",
+   "label": "License Key",
+   "set_only_once": 1
+  },
+  {
+   "depends_on": "eval: doc.state != \"Inactive\"",
+   "fieldname": "subscription_details_section",
+   "fieldtype": "Section Break",
+   "label": "Subscription Details"
+  },
+  {
+   "depends_on": "eval: doc.renew_cycle != \"Permanent\"",
+   "fieldname": "subscription_expires",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Subscription Expires"
+  },
+  {
+   "fieldname": "renew_cycle",
+   "fieldtype": "Select",
+   "label": "Renew Cycle",
+   "options": "Monthly\nEvery 3 Months\nEvery 6 Months\nYearly\nPermanent"
+  },
+  {
+   "fieldname": "sharing_section",
+   "fieldtype": "Section Break",
+   "label": "Sharing"
+  },
+  {
+   "fieldname": "table_gqjh",
+   "fieldtype": "Table",
+   "options": "Associated User"
+  },
+  {
+   "fieldname": "resources_section",
+   "fieldtype": "Section Break",
+   "label": "Resources"
+  },
+  {
+   "fieldname": "invoices",
+   "fieldtype": "Attach",
+   "label": "Invoices"
+  },
+  {
+   "fieldname": "column_break_bhiz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "images",
+   "fieldtype": "Attach Image",
+   "label": "Images"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-08-28 15:54:42.781731",
+ "modified_by": "Administrator",
+ "module": "Assets",
+ "name": "License Assets",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "route": "software-assets",
+ "row_format": "Dynamic",
+ "show_preview_popup": 1,
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "license_model",
+ "track_changes": 1
+}

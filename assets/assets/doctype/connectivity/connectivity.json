@@ -1,0 +1,115 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-08-13 11:52:25.489730",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "connectivity_information_section",
+  "ip_addresses_column",
+  "protocol",
+  "network_type",
+  "ip_address",
+  "gateway",
+  "port",
+  "vpn_ip_address",
+  "mac",
+  "column_break_ijou",
+  "username",
+  "password",
+  "anydesk_address",
+  "url"
+ ],
+ "fields": [
+  {
+   "fieldname": "connectivity_information_section",
+   "fieldtype": "Section Break",
+   "label": "Connectivity Information"
+  },
+  {
+   "fieldname": "ip_address",
+   "fieldtype": "Data",
+   "label": "IP Address"
+  },
+  {
+   "fieldname": "gateway",
+   "fieldtype": "Data",
+   "label": "Gateway"
+  },
+  {
+   "fieldname": "vpn_ip_address",
+   "fieldtype": "Data",
+   "label": "VPN IP Address"
+  },
+  {
+   "fieldname": "username",
+   "fieldtype": "Data",
+   "label": "Username"
+  },
+  {
+   "fieldname": "password",
+   "fieldtype": "Password",
+   "label": "Password"
+  },
+  {
+   "fieldname": "ip_addresses_column",
+   "fieldtype": "Column Break",
+   "label": "Networking"
+  },
+  {
+   "fieldname": "anydesk_address",
+   "fieldtype": "Data",
+   "label": "Anydesk Address"
+  },
+  {
+   "fieldname": "protocol",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Protocol",
+   "options": "IP Address\nRemote Desktop\nSSH\nFTP\nAnyDesk\nWebserver",
+   "reqd": 1
+  },
+  {
+   "fieldname": "port",
+   "fieldtype": "Int",
+   "label": "Port"
+  },
+  {
+   "fieldname": "mac",
+   "fieldtype": "Data",
+   "label": "MAC"
+  },
+  {
+   "fieldname": "column_break_ijou",
+   "fieldtype": "Column Break",
+   "label": "Auth"
+  },
+  {
+   "depends_on": "eval: doc.protocol == \"IP Address\" || doc.protocol == \"Webserver\"",
+   "fieldname": "url",
+   "fieldtype": "Data",
+   "label": "URL"
+  },
+  {
+   "fieldname": "network_type",
+   "fieldtype": "Select",
+   "label": "Network Type",
+   "options": "LAN\nWAN\nVPN"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-08-28 15:20:57.038060",
+ "modified_by": "Administrator",
+ "module": "Assets",
+ "name": "Connectivity",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

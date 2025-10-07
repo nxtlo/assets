@@ -1,0 +1,241 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-08-13 11:42:31.112332",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "basic_details_section",
+  "general_information_column",
+  "model",
+  "column_break_yqvn",
+  "manufacturer",
+  "sharing_section",
+  "table_gqjh",
+  "license_tab",
+  "license_section",
+  "basic_info_column",
+  "service",
+  "auth",
+  "state",
+  "authentication_column",
+  "login_username",
+  "login_password",
+  "license_key",
+  "subscription_details_section",
+  "subscription_expires",
+  "renew_cycle",
+  "resources_section",
+  "invoices",
+  "column_break_bhiz",
+  "images",
+  "legality_tab",
+  "section_break_vzrs",
+  "legality_column",
+  "invoice",
+  "covenant",
+  "additional_notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "basic_details_section",
+   "fieldtype": "Section Break",
+   "label": "Software Information"
+  },
+  {
+   "fieldname": "general_information_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "model.manufacturer",
+   "fieldname": "manufacturer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Manufacturer",
+   "options": "Manufacturer",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "model",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "legality_tab",
+   "fieldtype": "Tab Break",
+   "label": "Legality"
+  },
+  {
+   "fieldname": "section_break_vzrs",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "legality_column",
+   "fieldtype": "Column Break",
+   "label": "Legality"
+  },
+  {
+   "fieldname": "invoice",
+   "fieldtype": "Attach",
+   "label": "Invoice",
+   "no_copy": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "covenant",
+   "fieldtype": "Attach",
+   "label": "Covenant"
+  },
+  {
+   "fieldname": "additional_notes",
+   "fieldtype": "Small Text",
+   "label": "Additional Notes"
+  },
+  {
+   "fieldname": "license_tab",
+   "fieldtype": "Tab Break",
+   "label": "License"
+  },
+  {
+   "fieldname": "license_section",
+   "fieldtype": "Section Break",
+   "label": "License"
+  },
+  {
+   "fieldname": "basic_info_column",
+   "fieldtype": "Column Break",
+   "label": "Basic Info"
+  },
+  {
+   "fieldname": "service",
+   "fieldtype": "Link",
+   "label": "Service",
+   "options": "Asset Model",
+   "reqd": 1
+  },
+  {
+   "fieldname": "auth",
+   "fieldtype": "Select",
+   "label": "Auth",
+   "options": "Login\nLicense Key",
+   "reqd": 1
+  },
+  {
+   "fieldname": "authentication_column",
+   "fieldtype": "Column Break",
+   "label": "Authentication"
+  },
+  {
+   "depends_on": "eval: doc.auth == \"Login\"",
+   "fieldname": "login_username",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Login Username"
+  },
+  {
+   "depends_on": "eval: doc.auth == \"Login\"",
+   "fieldname": "login_password",
+   "fieldtype": "Password",
+   "label": "Login Password"
+  },
+  {
+   "depends_on": "eval: doc.auth == \"License Key\"",
+   "fieldname": "license_key",
+   "fieldtype": "Data",
+   "label": "License Key"
+  },
+  {
+   "depends_on": "eval: doc.state != \"Inactive\"",
+   "fieldname": "subscription_details_section",
+   "fieldtype": "Section Break",
+   "label": "Subscription Details"
+  },
+  {
+   "fieldname": "subscription_expires",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Subscription Expires"
+  },
+  {
+   "fieldname": "renew_cycle",
+   "fieldtype": "Select",
+   "label": "Renew Cycle",
+   "options": "Monthly\nEvery 3 Months\nEvery 6 Months\nYearly\nPermanent"
+  },
+  {
+   "fieldname": "sharing_section",
+   "fieldtype": "Section Break",
+   "label": "Sharing"
+  },
+  {
+   "fieldname": "table_gqjh",
+   "fieldtype": "Table",
+   "options": "Associated User"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Select",
+   "label": "State",
+   "options": "Active\nInactive\nExpired"
+  },
+  {
+   "fieldname": "resources_section",
+   "fieldtype": "Section Break",
+   "label": "Resources"
+  },
+  {
+   "fieldname": "invoices",
+   "fieldtype": "Attach",
+   "label": "Invoices"
+  },
+  {
+   "fieldname": "column_break_bhiz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "images",
+   "fieldtype": "Attach Image",
+   "label": "Images"
+  },
+  {
+   "fieldname": "column_break_yqvn",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-08-28 15:20:57.438178",
+ "modified_by": "Administrator",
+ "module": "Assets",
+ "name": "Software Assets",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "route": "software-assets",
+ "row_format": "Dynamic",
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "model",
+ "track_changes": 1
+}

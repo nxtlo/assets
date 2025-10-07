@@ -1,0 +1,264 @@
+{
+ "actions": [],
+ "allow_events_in_timeline": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "creation": "2025-08-16 16:27:38.471463",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "engine": "InnoDB",
+ "field_order": [
+  "details_tab",
+  "basic_details_section",
+  "general_information_column",
+  "asset_category",
+  "network_device_type",
+  "asset_name",
+  "asset_owner",
+  "asset_location",
+  "asset_status",
+  "asset_cost",
+  "asset_information_column",
+  "asset_serial",
+  "manufacturer",
+  "model",
+  "computer_type",
+  "image",
+  "connectivity_tab",
+  "device_connectivity_section",
+  "table_eyir",
+  "associated_software_section",
+  "table_dvaq",
+  "legality_tab",
+  "section_break_vzrs",
+  "legality_column",
+  "invoice",
+  "covenant",
+  "additional_information_column",
+  "additional_notes",
+  "sim_tab",
+  "sim_cards"
+ ],
+ "fields": [
+  {
+   "fieldname": "basic_details_section",
+   "fieldtype": "Section Break",
+   "label": "Basic Information"
+  },
+  {
+   "fieldname": "general_information_column",
+   "fieldtype": "Column Break",
+   "label": "General Information"
+  },
+  {
+   "fieldname": "asset_name",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "label": "Name",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "asset_owner",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee in Charge",
+   "options": "Contact"
+  },
+  {
+   "fieldname": "asset_location",
+   "fieldtype": "Select",
+   "label": "Project in Charge",
+   "options": "HO\nBDC\nHTC\nOCC\nBlue Square\nJaffai\nValet\nTPE JED WALK",
+   "reqd": 1
+  },
+  {
+   "fieldname": "asset_status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nInactive\nUnused\nIn Repair\nUnknown",
+   "reqd": 1
+  },
+  {
+   "fieldname": "asset_cost",
+   "fieldtype": "Currency",
+   "label": "Cost",
+   "non_negative": 1,
+   "read_only": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "asset_information_column",
+   "fieldtype": "Column Break",
+   "label": "Asset information"
+  },
+  {
+   "fieldname": "asset_serial",
+   "fieldtype": "Barcode",
+   "in_list_view": 1,
+   "label": "Serial Number",
+   "no_copy": 1,
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "manufacturer",
+   "fieldtype": "Link",
+   "label": "Manufacturer",
+   "options": "Manufacturer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "model",
+   "fieldtype": "Link",
+   "label": "Model",
+   "options": "Asset Model"
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "Image"
+  },
+  {
+   "depends_on": "eval: doc.asset_category == 'k244rg3h61' || doc.asset_category == '55gnjj03u5' || doc.asset_category == 'vo7jhqvqfm' || doc.asset_category == 'jvue1ah4g2' || doc.asset_category == 'm5sug8hmkv' || doc.asset_category == '3qd0s69boo' || doc.asset_category == 'sq7vg2p0c7'",
+   "fieldname": "connectivity_tab",
+   "fieldtype": "Tab Break",
+   "label": "Linkage",
+   "show_dashboard": 1
+  },
+  {
+   "depends_on": "eval: doc.asset_category == 'k244rg3h61' || doc.asset_category == '55gnjj03u5' || doc.asset_category == 'vo7jhqvqfm' || doc.asset_category == 'jvue1ah4g2' || doc.asset_category == 'm5sug8hmkv' || doc.asset_category == '3qd0s69boo' || doc.asset_category == 'sq7vg2p0c7'",
+   "fieldname": "device_connectivity_section",
+   "fieldtype": "Section Break",
+   "label": "Device Connectivity"
+  },
+  {
+   "fieldname": "table_eyir",
+   "fieldtype": "Table",
+   "options": "Connectivity"
+  },
+  {
+   "depends_on": "eval: doc.asset_category == \"jvue1ah4g2\"",
+   "fieldname": "associated_software_section",
+   "fieldtype": "Section Break",
+   "label": "Associated Software"
+  },
+  {
+   "fieldname": "table_dvaq",
+   "fieldtype": "Table",
+   "options": "Associated Asset"
+  },
+  {
+   "fieldname": "legality_tab",
+   "fieldtype": "Tab Break",
+   "label": "Legality"
+  },
+  {
+   "fieldname": "section_break_vzrs",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "legality_column",
+   "fieldtype": "Column Break",
+   "label": "Legality"
+  },
+  {
+   "fieldname": "invoice",
+   "fieldtype": "Attach",
+   "label": "Invoice",
+   "no_copy": 1
+  },
+  {
+   "fieldname": "covenant",
+   "fieldtype": "Attach",
+   "label": "Covenant",
+   "no_copy": 1
+  },
+  {
+   "fieldname": "additional_notes",
+   "fieldtype": "Small Text",
+   "label": "Additional Notes"
+  },
+  {
+   "fieldname": "additional_information_column",
+   "fieldtype": "Column Break",
+   "label": "Additional Information"
+  },
+  {
+   "fieldname": "asset_category",
+   "fieldtype": "Link",
+   "label": "Category",
+   "options": "Asset Category",
+   "reqd": 1
+  },
+  {
+   "fieldname": "details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Details"
+  },
+  {
+   "depends_on": "eval: doc.asset_category == \"k244rg3h61\" || doc.asset_category == \"3c7bjsrugb\"",
+   "fieldname": "sim_tab",
+   "fieldtype": "Tab Break",
+   "label": "SIM"
+  },
+  {
+   "fieldname": "sim_cards",
+   "fieldtype": "Table",
+   "label": "SIM Cards",
+   "options": "Simcard Assets"
+  },
+  {
+   "depends_on": "eval: doc.asset_category == \"jvue1ah4g2\"",
+   "fieldname": "computer_type",
+   "fieldtype": "Select",
+   "label": "Computer Type",
+   "mandatory_depends_on": "eval: doc.asset_category != null",
+   "options": "PC\nAll-in-One\nLaptop\nLocal Server\nVPS"
+  },
+  {
+   "default": "None",
+   "depends_on": "eval: doc.asset_category == \"k244rg3h61\"",
+   "fieldname": "network_device_type",
+   "fieldtype": "Select",
+   "label": "Network Device Type",
+   "mandatory_depends_on": "eval: doc.asset_category == \"k244rg3h61\"",
+   "options": "Switch\nRouter\nServer\nAccess Point\nNone"
+  }
+ ],
+ "grid_page_length": 50,
+ "image_field": "image",
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-09-17 14:36:54.126956",
+ "modified_by": "Administrator",
+ "module": "Assets",
+ "name": "Asset",
+ "nsm_parent_field": "parent_asset",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "route": "asset",
+ "row_format": "Dynamic",
+ "show_name_in_global_search": 1,
+ "show_preview_popup": 1,
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "asset_name",
+ "track_changes": 1
+}

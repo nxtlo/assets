@@ -1,0 +1,125 @@
+{
+ "charts": [
+  {
+   "chart_name": "Asset Chart",
+   "label": "Asset Chart"
+  }
+ ],
+ "content": "[{\"id\":\"Os4FWEtKE2\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h1\\\">Assets</span>\",\"col\":12}},{\"id\":\"RfME6APXqr\",\"type\":\"card\",\"data\":{\"card_name\":\"Create\",\"col\":4}},{\"id\":\"qaO4FQzl7j\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Asset Preview\",\"col\":4}},{\"id\":\"h07F4Ki6tA\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Softwares\",\"col\":4}},{\"id\":\"PylqMYRe5D\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Asset Chart\",\"col\":12}}]",
+ "creation": "2025-08-18 17:00:24.375680",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "menu",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Assets",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Create",
+   "link_count": 6,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Asset",
+   "link_count": 0,
+   "link_to": "Asset",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Software",
+   "link_count": 0,
+   "link_to": "Software Assets",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "License",
+   "link_count": 0,
+   "link_to": "License Assets",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Category",
+   "link_count": 0,
+   "link_to": "Asset Category",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Model",
+   "link_count": 0,
+   "link_to": "Asset Model",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Manufacturer",
+   "link_count": 0,
+   "link_to": "Manufacturer",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2025-08-28 15:55:23.218739",
+ "modified_by": "Administrator",
+ "module": "Assets",
+ "name": "Assets",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [
+  {
+   "document_type": "Software Assets",
+   "label": "Softwares",
+   "quick_list_filter": "[]"
+  },
+  {
+   "document_type": "Asset",
+   "label": "Asset Preview",
+   "quick_list_filter": "[]"
+  }
+ ],
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Asset Manager"
+  },
+  {
+   "role": "Asset Viewer"
+  }
+ ],
+ "sequence_id": 1.0,
+ "shortcuts": [],
+ "title": "Assets"
+}

@@ -1,0 +1,101 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-08-12 14:43:55.376953",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "manufacturer_details_section",
+  "manufacturer_name",
+  "manufacturer_phone",
+  "manufacturer_website",
+  "column_break_jzju",
+  "manufacturer_image",
+  "gps_location"
+ ],
+ "fields": [
+  {
+   "fieldname": "manufacturer_details_section",
+   "fieldtype": "Section Break",
+   "label": "Manufacturer Details"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "manufacturer_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Manufacturer Name",
+   "no_copy": 1,
+   "reqd": 1,
+   "set_only_once": 1,
+   "unique": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "manufacturer_phone",
+   "fieldtype": "Phone",
+   "label": "Phone",
+   "no_copy": 1,
+   "set_only_once": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "manufacturer_website",
+   "fieldtype": "Data",
+   "label": "Website",
+   "no_copy": 1,
+   "set_only_once": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_jzju",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "manufacturer_image",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "in_preview": 1,
+   "label": "Image",
+   "no_copy": 1
+  },
+  {
+   "fieldname": "gps_location",
+   "fieldtype": "Small Text",
+   "label": "GPS Location"
+  }
+ ],
+ "grid_page_length": 50,
+ "image_field": "manufacturer_image",
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-08-28 15:20:57.823889",
+ "modified_by": "Administrator",
+ "module": "Assets",
+ "name": "Manufacturer",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "protect_attached_files": 1,
+ "quick_entry": 1,
+ "row_format": "Dynamic",
+ "show_name_in_global_search": 1,
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "manufacturer_name"
+}
